@@ -15,7 +15,7 @@ def approximate_exp(X, N):
     except Exception as e:
         return f"Ошибка: {e}"
 
-X = float(input("Введите вещественное число X: "))
-N = int(input("Введите целое число N (> 0): "))
+X = float(input("Введите число X: "))
+N = int(input("Введите число N (> 0): "))
 
 print(approximate_exp(X, N))
