@@ -1,17 +1,12 @@
 # Даны три числа. Найти среднее из них (то есть число, расположенное между
 # наименьшим и наибольшим).
-try:
-    # Ввод трех чисел
-    a = float(input("Введите первое число: "))
-    b = float(input("Введите второе число: "))
-    c = float(input("Введите третье число: "))
 
-    # Находим среднее число
-    numbers = [a, b, c]
-    numbers.sort()  # Сортируем числа
-    middle_number = numbers[1]  # Среднее число будет на позиции 1 (второе по величине)
+num1 = float(input("Введите первое число: "))
+num2 = float(input("Введите второе число: "))
+num3 = float(input("Введите третье число: "))
 
-    print(f"Среднее число: {middle_number}")
+smallest = min(num1, num2, num3)
+largest = max(num1, num2, num3)
+average = (num1 + num2 + num3) - smallest - largest
 
-except ValueError:
-    print("Ошибка: введены не числа. Пожалуйста, введите числовые значения.")
+print(f"число, расположенное между наименьшим и наибольшим: {average}")
