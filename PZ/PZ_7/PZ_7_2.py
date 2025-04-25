@@ -2,7 +2,7 @@
 # Вывести строку, содержащую эти же слова, разделенные одним пробелом и расположенные в обратном порядке.
 
 input_s = "САМОЛЕТ  АВТОМОБИЛЬ  ВЕЛОСИПЕД  ТРАМВАЙ"
-words = input_s.split()
-words_sort = sorted(words)
-output_s = ' '.join(words_sort)
+words = input_s.split() # Разделение строки по пробелам
+words_sort = sorted(words) # Сортировка слов в алфавитном порядке
+output_s = ' '.join(words_sort) # Объединение слов с одним пробелом между ними
 print(output_s)
