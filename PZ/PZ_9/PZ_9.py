@@ -21,4 +21,4 @@ for name, height in people.items():
         min_height = height
 
 print(f"Наибольшее: {max_height}, наименьшее: {min_height}")
-наибольшее 200, наименьшее 150)
+
