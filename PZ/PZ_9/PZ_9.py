@@ -11,8 +11,8 @@ people = {
     "Дмитрий": 190
 }
 
-max_height = -float('inf')  # начинаем с минимально возможного значения
-min_height = float('inf')   # начинаем с максимально возможного значения
+max_height = -float('inf')  
+min_height = float('inf')   
 
 for name, height in people.items():
     if height > max_height:
