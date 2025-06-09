@@ -3,9 +3,7 @@
 # составить список из множества побывавших у него в гостях друзей, причем хозяина в этот
 # список не включать).
 
-
 students = {"Андрей", "Виктор", "Максим", "Ольга", "Елена", "Дмитрий"}
-
 
 visits = {
     ("Андрей", "Виктор"),
@@ -24,18 +22,16 @@ visits = {
     ("Дмитрий", "Елена")
 }
 
-
 universal_guest = None
 
 for guest in students:
- 
+    
     visited_hosts = {host for (g, host) in visits if g == guest}
     
-   
     if visited_hosts == students - {guest}:
         universal_guest = guest
         break
-
+        
 if universal_guest:
     print(f"Студент, который был в гостях у всех: {universal_guest}")
 else:
