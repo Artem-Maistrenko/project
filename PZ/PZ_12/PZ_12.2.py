@@ -1,4 +1,4 @@
-# Составить генератор (yield), который преобразует все буквенные символы в
+# Составить генератор (yield), который преобразует все буквенные символы в 
 # заглавные
 def uppercase_generator(iterable):
     for char in iterable:
@@ -6,4 +6,4 @@ def uppercase_generator(iterable):
 
 text = "Hello, World! 123"
 gen = uppercase_generator(text)
-print(list(gen))
+print(list(gen))  
