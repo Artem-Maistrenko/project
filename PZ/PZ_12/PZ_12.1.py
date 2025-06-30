@@ -1,14 +1,18 @@
 # В последовательности на n целых элементов найти произведение элементов 
 # средней трети. 
-from math import prod
-from typing import List
+from functools import reduce
+from operator import mul
 
-def middle_third_product(arr: List[int]) -> int:
+
+def product_of_middle_third(arr):
     n = len(arr)
     third = n // 3
-    start = (n - third) // 2 
-    middle = arr[start : start + third]
-    return prod(middle)  
+    start = third
+    end = 2 * third if n % 3 == 0 else n - third
 
-print(middle_third_product([1, 2, 3, 4, 5, 6, 7, 8, 9]))  
-print(middle_third_product([1, 2, 3, 4, 5, 6, 7]))        
+    middle_part = arr[start:end]
+    return reduce(mul, middle_part, 1)  # 1 — начальное значение для умножения
+
+sequence = [1, 2, 3, 4, 5, 6, 7]
+result = product_of_middle_third(sequence)
+print(result)
